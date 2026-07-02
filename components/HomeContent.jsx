@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Star, MapPin, Clock, ChevronRight } from 'lucide-react'
+import { Star, MapPin, Clock, ChevronRight, Phone } from 'lucide-react'
 
 const HOURS = [
   { day: 1, name: 'Monday',    hours: '11:00 AM – 9:00 PM' },
@@ -52,16 +52,16 @@ export default function HomeContent() {
             </div>
 
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold leading-tight mb-6 max-w-5xl [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
-              Authentic Vietnamese Comfort Food in{' '}
+              Hội An chicken rice. 8-hour phở.{' '}
               <br className="hidden md:block" />
-              <span className="text-gold">Kansas City</span>.
+              Made by family in <span className="text-gold">Kansas City</span>.
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-10 [text-shadow:_0_1px_3px_rgba(0,0,0,0.5)]">
-              Family recipes. Fresh ingredients. Pho, Banh Mi &amp; Cơm Gà done the traditional way.
+              Our broth starts before sunrise. Our recipes started three generations ago.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-6">
               <a
                 href="https://comgahoustonolathe.toast.site/order"
                 target="_blank"
@@ -78,22 +78,24 @@ export default function HomeContent() {
               </Link>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
-              <div className="flex items-center gap-2 text-white/90 text-sm font-medium bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
-                <div className="flex items-center gap-0.5 text-gold">
-                  <span className="font-bold mr-1">4.8</span>
-                  {[...Array(4)].map((_, i) => (
-                    <Star key={i} size={14} className="fill-gold" />
-                  ))}
-                  <div className="relative flex">
-                    <Star size={14} className="text-gold" />
-                    <div className="absolute inset-0 overflow-hidden" style={{ width: '80%' }}>
-                      <Star size={14} className="fill-gold text-gold" />
-                    </div>
+            {/* Proof line at the decision point */}
+            <div className="flex items-center gap-2 text-white/90 text-sm font-medium mb-10">
+              <div className="flex items-center gap-0.5 text-gold">
+                <span className="font-bold mr-1">4.8</span>
+                {[...Array(4)].map((_, i) => (
+                  <Star key={i} size={14} className="fill-gold" />
+                ))}
+                <div className="relative flex">
+                  <Star size={14} className="text-gold" />
+                  <div className="absolute inset-0 overflow-hidden" style={{ width: '80%' }}>
+                    <Star size={14} className="fill-gold text-gold" />
                   </div>
                 </div>
-                <span>Loved by Kansas City foodies</span>
               </div>
+              <span className="italic">"Real Vietnamese taste... reminds me of home." – Thien N.</span>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8">
               <div className="flex items-center gap-2 text-white/90 text-sm font-medium bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
                 <Clock size={16} className="text-gold" />
                 <span>Family-owned</span>
@@ -111,10 +113,10 @@ export default function HomeContent() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x-0 md:divide-x divide-white/10">
               {[
-                { stat: '4.8★', label: 'Google Reviews', sub: 'Loved by the Olathe community' },
-                { stat: '30+', label: 'Menu Items', sub: 'Authentic dishes & flavors' },
-                { stat: 'Daily', label: 'Fresh Ingredients', sub: 'Broths simmered for hours' },
-                { stat: 'Fast', label: 'Toast Ordering', sub: 'Seamless online checkout' },
+                { stat: '4.8★', label: 'Google Reviews', sub: 'Rated by Kansas City diners' },
+                { stat: '5 AM', label: 'Broth O\'Clock', sub: 'When our phở starts simmering every day' },
+                { stat: '3', label: 'Generations', sub: 'Of family recipes on the menu' },
+                { stat: '~15 min', label: 'Pickup Time', sub: 'Order online, we\'ll have it ready' },
               ].map(({ stat, label, sub }) => (
                 <div key={label} className="flex flex-col items-center text-center px-4">
                   <span className="font-serif text-4xl text-gold mb-2">{stat}</span>
@@ -336,7 +338,7 @@ export default function HomeContent() {
                 rel="noopener noreferrer"
                 className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-base font-semibold text-white hover:bg-primary-hover transition-colors shadow-md w-full sm:w-auto group"
               >
-                Order Now <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Start your pickup order <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="tel:9132328306" className="inline-flex h-12 items-center justify-center text-foreground hover:text-primary transition-colors font-medium">
                 Call (913) 232-8306
@@ -457,7 +459,7 @@ export default function HomeContent() {
             rel="noopener noreferrer"
             className="inline-flex h-14 items-center justify-center rounded-md bg-white px-8 text-base font-bold text-primary hover:bg-white/90 transition-all hover:scale-105 shadow-lg group"
           >
-            Start Your Order <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            Get dinner going <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </section>
@@ -469,9 +471,9 @@ export default function HomeContent() {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="w-full lg:w-1/2">
               <span className="text-gold font-bold tracking-wider uppercase text-sm mb-4 block">VIP Insider List</span>
-              <h2 className="font-serif text-4xl md:text-5xl mb-6">Be the first to know about specials and family deals.</h2>
+              <h2 className="font-serif text-4xl md:text-5xl mb-6">Join the family list. Your first egg roll is on us.</h2>
               <p className="text-lg text-white/70 mb-8 max-w-lg">
-                Join our family list to get exclusive updates on featured dishes, seasonal specials, and secret menu items before anyone else.
+                Sign up and we'll treat you to a free Chả Giò egg roll on your next pickup, plus early word on seasonal specials, family deals, and secret menu items.
               </p>
             </div>
 
@@ -615,14 +617,23 @@ export default function HomeContent() {
           <span className="text-sm font-medium">Ready to order?</span>
           <span className="text-xs text-white/70">Order for Pickup</span>
         </div>
-        <a
-          href="https://comgahoustonolathe.toast.site/order"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary-hover transition-colors"
-        >
-          Order Now
-        </a>
+        <div className="flex items-center gap-2">
+          <a
+            href="tel:9132328306"
+            aria-label="Call Cơm Gà Houston at (913) 232-8306"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/25 text-white hover:bg-white/10 transition-colors"
+          >
+            <Phone size={18} />
+          </a>
+          <a
+            href="https://comgahoustonolathe.toast.site/order"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary-hover transition-colors"
+          >
+            Order Now
+          </a>
+        </div>
       </div>
     </>
   )
@@ -700,7 +711,7 @@ function VipForm() {
       ))}
 
       <button type="submit" className="w-full h-12 bg-primary hover:bg-primary-hover text-white font-medium rounded-md transition-colors mt-2">
-        Join the VIP List
+        Claim my free egg roll
       </button>
 
       <p className="text-[11px] text-muted-foreground text-center mt-4 leading-tight">
@@ -709,7 +720,7 @@ function VipForm() {
 
       {submitted && (
         <div className="mt-4 p-3 bg-green-100 text-green-800 text-sm rounded-md text-center" aria-live="polite">
-          Thanks for joining! Keep an eye on your inbox for our latest specials.
+          You're in! Mention the VIP list at the register for your free egg roll on your next pickup.
         </div>
       )}
     </form>
