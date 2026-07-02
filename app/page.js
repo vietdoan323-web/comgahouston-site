@@ -14,10 +14,10 @@ export const metadata = {
     url: 'https://www.comgahouston.com/',
     images: [
       {
-        url: '/images/hero-vietnamese-chicken-rice.png',
-        width: 1200,
-        height: 630,
-        alt: 'Cơm Gà Houston – Authentic Vietnamese Cuisine',
+        url: '/images/hero-vietnamese-food-spread.jpg',
+        width: 1365,
+        height: 768,
+        alt: 'A spread of Cơm Gà Houston dishes: phở, bánh mì, cơm gà, and more',
       },
     ],
   },
@@ -32,7 +32,7 @@ const jsonLd = {
   url: 'https://www.comgahouston.com',
   telephone: '+19132328306',
   image:
-    'https://www.comgahouston.com/images/hero-vietnamese-chicken-rice.png',
+    'https://www.comgahouston.com/images/hero-vietnamese-food-spread.jpg',
   logo:
     'https://www.comgahouston.com/images/logo.png',
   address: {

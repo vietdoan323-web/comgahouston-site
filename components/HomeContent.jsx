@@ -37,8 +37,8 @@ export default function HomeContent() {
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="/images/hero-vietnamese-chicken-rice.png"
-              alt="Authentic Vietnamese Chicken Rice"
+              src="/images/hero-vietnamese-food-spread.jpg"
+              alt="A spread of Cơm Gà Houston dishes: phở, bánh mì, cơm gà, and more"
               className="w-full h-full object-cover"
               loading="eager"
             />
