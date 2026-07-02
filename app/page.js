@@ -1,16 +1,16 @@
 import HomeContent from '@/components/HomeContent'
 
 export const metadata = {
-  title: 'Cơm Gà Houston | Authentic Vietnamese Cuisine – Kansas City, KS',
+  title: 'Best Vietnamese Food in Kansas City | Cơm Gà Houston – Olathe, KS',
   description:
-    'Authentic Vietnamese restaurant in Kansas City KS. Experience our signature chicken rice, fresh pho, and traditional family recipes. Order online for pickup.',
+    'Looking for the best Vietnamese food in KC? Cơm Gà Houston serves signature chicken rice, fresh pho, and banh mi from family recipes. 4.8 stars on Google. Order online for pickup.',
   alternates: {
     canonical: 'https://www.comgahouston.com/',
   },
   openGraph: {
-    title: 'Cơm Gà Houston | Authentic Vietnamese Cuisine – Kansas City, KS',
+    title: 'Best Vietnamese Food in Kansas City | Cơm Gà Houston',
     description:
-      'Family-owned Vietnamese restaurant in Olathe, KS. Signature Cơm Gà, fresh Pho, Bánh Mì, and more.',
+      'Family-owned Vietnamese restaurant in Olathe, KS serving some of the best Vietnamese food in KC. Signature Cơm Gà, fresh Pho, Bánh Mì, and more.',
     url: 'https://www.comgahouston.com/',
     images: [
       {
@@ -28,7 +28,7 @@ const jsonLd = {
   '@type': 'Restaurant',
   name: 'Cơm Gà Houston',
   description:
-    'Authentic Vietnamese restaurant in Olathe, KS serving signature chicken rice, pho, banh mi, and traditional family recipes.',
+    'Family-owned restaurant serving some of the best Vietnamese food in Kansas City: signature chicken rice, pho, banh mi, and traditional family recipes in Olathe, KS.',
   url: 'https://www.comgahouston.com',
   telephone: '+19132328306',
   image:
@@ -117,6 +117,14 @@ const faqJsonLd = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'We do our best to accommodate dietary preferences. Let us know any dietary restrictions when you visit or order and our staff will guide you.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Where can I find the best Vietnamese food in Kansas City?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Kansas City locals consistently rate Cơm Gà Houston among the best Vietnamese food in KC, with 4.8 stars on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.',
       },
     },
   ],

@@ -20,10 +20,10 @@ export const metadata = {
   metadataBase: new URL('https://www.comgahouston.com'),
   title: {
     template: '%s | Cơm Gà Houston',
-    default: 'Cơm Gà Houston | Authentic Vietnamese Cuisine – Kansas City, KS',
+    default: 'Best Vietnamese Food in Kansas City | Cơm Gà Houston – Olathe, KS',
   },
   description:
-    'Authentic Vietnamese restaurant in Kansas City KS. Experience our signature chicken rice, fresh pho, and traditional family recipes. Order online.',
+    'Looking for the best Vietnamese food in KC? Cơm Gà Houston serves signature chicken rice, fresh pho, and banh mi from family recipes. Order online.',
   openGraph: {
     siteName: 'Cơm Gà Houston',
     type: 'website',

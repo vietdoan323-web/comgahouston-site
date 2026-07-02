@@ -350,8 +350,8 @@ export default function HomeContent() {
       <section id="reviews" className="py-24 bg-surface border-y border-border">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">Loved by Kansas City</h2>
-            <p className="text-muted-foreground text-lg">Don't just take our word for it.</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">Some of the Best Vietnamese Food in KC</h2>
+            <p className="text-muted-foreground text-lg">Don't just take our word for it. 4.8 stars from Kansas City diners.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
@@ -513,6 +513,10 @@ export default function HomeContent() {
               {
                 q: 'Do you offer vegetarian or dietary-friendly options?',
                 a: 'We do our best to accommodate dietary preferences. Let us know any dietary restrictions when you visit or order and our staff will guide you.',
+              },
+              {
+                q: 'Where can I find the best Vietnamese food in Kansas City?',
+                a: 'Kansas City locals consistently rate Cơm Gà Houston among the best Vietnamese food in KC, with 4.8 stars on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.',
               },
             ].map(({ q, a }) => (
               <div key={q} className="bg-card p-6 rounded-xl border border-border shadow-sm">
