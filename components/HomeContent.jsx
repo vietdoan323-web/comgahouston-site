@@ -52,9 +52,9 @@ export default function HomeContent() {
             </div>
 
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold leading-tight mb-6 max-w-5xl [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
-              Hội An chicken rice. 8-hour phở.{' '}
+              Authentic Vietnamese Comfort Food in{' '}
               <br className="hidden md:block" />
-              Made by family in <span className="text-gold">Kansas City</span>.
+              <span className="text-gold">Kansas City</span>.
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-10 [text-shadow:_0_1px_3px_rgba(0,0,0,0.5)]">
