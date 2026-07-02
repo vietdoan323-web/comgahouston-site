@@ -133,7 +133,18 @@ export default function HomeContent() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">Dine-In Lunch Specials</h2>
-              <p className="text-muted-foreground text-lg">Mon–Sat 11AM–3PM, dine-in only</p>
+              <p className="text-muted-foreground text-lg">Mon–Sat 11AM–3PM, dine-in only. Includes a free drink.</p>
+            </div>
+
+            <div className="max-w-sm mx-auto mb-12">
+              <img
+                src="/images/lunch-specials-flyer.jpg"
+                alt="Cơm Gà Houston lunch specials: dine-in only, 11AM to 3PM, includes a free drink, starting at $11.99"
+                width={1080}
+                height={1350}
+                className="w-full rounded-2xl shadow-lg"
+                loading="lazy"
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
