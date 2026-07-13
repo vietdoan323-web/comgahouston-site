@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import { getAllPosts, formatDate } from '@/lib/blog'
 
 export const metadata = {
   title: 'Blog | Vietnamese Food Stories – Cơm Gà Houston',
@@ -8,37 +9,9 @@ export const metadata = {
   alternates: { canonical: 'https://www.comgahouston.com/blog' },
 }
 
-const posts = [
-  {
-    slug: 'what-is-com-ga',
-    title: 'What Is Cơm Gà? The Story Behind Vietnamese Chicken Rice',
-    excerpt:
-      'From the streets of Hội An to our kitchen in Olathe: how a humble dish of poached chicken and golden rice became our namesake.',
-    date: 'April 21, 2026',
-    category: 'Food Culture',
-    img: '/images/com-ga-dark-white-chicken-rice.png',
-  },
-  {
-    slug: 'how-to-eat-pho',
-    title: 'How to Eat Pho Like You Grew Up With It',
-    excerpt:
-      'Herbs first or last? Hoisin in the bowl or on the side? A friendly guide to getting the most out of every bowl.',
-    date: 'May 5, 2026',
-    category: 'Guides',
-    img: '/images/pho-bo.jpg',
-  },
-  {
-    slug: 'vietnamese-coffee-guide',
-    title: 'Cà Phê Sữa Đá: Why Vietnamese Coffee Hits Different',
-    excerpt:
-      'Slow-drip phin filters, dark roast, and sweetened condensed milk. The afternoon ritual we brought with us to Kansas.',
-    date: 'May 19, 2026',
-    category: 'Drinks',
-    img: '/images/ca-phe-sua-da-iced-coffee.png',
-  },
-]
-
 export default function BlogPage() {
+  const posts = getAllPosts()
+
   return (
     <main className="py-20 bg-background">
       <BreadcrumbSchema name="Blog" path="/blog" />
@@ -57,11 +30,11 @@ export default function BlogPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {posts.map(({ slug, title, excerpt, date, category, img }) => (
+          {posts.map(({ slug, title, excerpt, date, category, image }) => (
             <Link key={slug} href={`/blog/${slug}`} className="bg-card rounded-xl overflow-hidden shadow-md border border-border group hover:shadow-lg transition-all flex flex-col">
               <div className="relative h-48 overflow-hidden">
                 <img
-                  src={img}
+                  src={image}
                   alt={title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -71,7 +44,7 @@ export default function BlogPage() {
                 </span>
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">{date}</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">{formatDate(date)}</p>
                 <h2 className="font-serif text-xl text-foreground mb-3 leading-snug group-hover:text-primary transition-colors">{title}</h2>
                 <p className="text-muted-foreground text-sm flex-grow">{excerpt}</p>
                 <p className="text-primary text-sm font-semibold mt-4">Read the story →</p>

@@ -52,6 +52,40 @@
   }
 }
 
+/* Rendered markdown body for blog posts (content/blog/*.md) */
+@layer components {
+  .blog-prose {
+    @apply text-lg text-foreground/80 leading-relaxed;
+  }
+  .blog-prose > * + * {
+    @apply mt-6;
+  }
+  .blog-prose h2 {
+    @apply font-serif text-3xl text-foreground pt-4;
+  }
+  .blog-prose h3 {
+    @apply font-serif text-2xl text-foreground pt-2;
+  }
+  .blog-prose a {
+    @apply text-primary hover:underline;
+  }
+  .blog-prose strong {
+    @apply text-foreground;
+  }
+  .blog-prose ul {
+    @apply list-disc pl-6 space-y-2;
+  }
+  .blog-prose ol {
+    @apply list-decimal pl-6 space-y-2;
+  }
+  .blog-prose img {
+    @apply rounded-2xl shadow-md;
+  }
+  .blog-prose blockquote {
+    @apply pl-6 border-l-4 border-primary font-serif italic text-2xl text-muted-foreground;
+  }
+}
+
 ::selection {
   background-color: hsl(var(--primary) / 0.2);
 }
