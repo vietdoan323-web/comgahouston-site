@@ -69,6 +69,11 @@ const jsonLd = {
     'https://www.instagram.com/comgahouston_ks/',
     'https://www.tiktok.com/@comgakansas',
   ],
+  areaServed: [
+    { '@type': 'City', name: 'Olathe', '@id': 'https://www.wikidata.org/wiki/Q485196' },
+    { '@type': 'City', name: 'Overland Park', '@id': 'https://www.wikidata.org/wiki/Q738142' },
+    { '@type': 'Place', name: 'Kansas City metro' },
+  ],
 }
 
 const faqJsonLd = {

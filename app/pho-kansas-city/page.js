@@ -99,6 +99,10 @@ export default function PhoPage() {
             </div>
           </section>
 
+          <p className="text-lg text-foreground/80 mb-16">
+            <Link href="/vietnamese-food-overland-park" className="text-primary hover:underline">Coming from Overland Park?</Link> We are about 10 minutes away on 119th Street.
+          </p>
+
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
             <h2 className="font-serif text-3xl text-foreground mb-4">Order Pho for Pickup Today</h2>
             <p className="text-muted-foreground mb-6">15204 W 119th St, Olathe, KS 66062 · (913) 232-8306</p>

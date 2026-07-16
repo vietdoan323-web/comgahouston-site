@@ -42,6 +42,7 @@ export default function Footer() {
               <li><Link href="/#story" className="text-white/70 hover:text-primary transition-colors">Our Story</Link></li>
               <li><Link href="/#reviews" className="text-white/70 hover:text-primary transition-colors">Reviews</Link></li>
               <li><Link href="/blog" className="text-white/70 hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link href="/vietnamese-food-overland-park" className="text-white/70 hover:text-primary transition-colors">Near Overland Park</Link></li>
               <li><a href="https://comgahoustonolathe.toast.site/order" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-white transition-colors">Order Online</a></li>
             </ul>
           </div>

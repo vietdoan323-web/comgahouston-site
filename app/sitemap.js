@@ -17,6 +17,7 @@ export default function sitemap() {
     { url: `${base}/pho-kansas-city`,         lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/banh-mi-kansas-city`,     lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/com-ga-kansas-city`,      lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/vietnamese-food-overland-park`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/catering`,                lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${base}/blog`,                    lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
     ...blogPosts,
