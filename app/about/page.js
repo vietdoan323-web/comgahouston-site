@@ -2,7 +2,7 @@ import Link from 'next/link'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'About Cơm Gà Houston | Our Story – Vietnamese Restaurant, Olathe KS',
+  title: 'About Us | Our Story in Olathe, KS',
   description:
     'Learn the story behind Cơm Gà Houston, a family-owned Vietnamese restaurant in Olathe, KS. Our recipes have been passed down through generations, made fresh every day.',
   alternates: { canonical: 'https://www.comgahouston.com/about' },

@@ -19,7 +19,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">
-              Authentic Vietnamese cuisine in Kansas City, KS. Serving traditional recipes passed down through generations, made fresh every single day.
+              Authentic Vietnamese cuisine in Olathe, KS, serving the Kansas City metro. Traditional recipes passed down through generations, made fresh every single day.
             </p>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/ComGaHoustonKansas/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-colors">

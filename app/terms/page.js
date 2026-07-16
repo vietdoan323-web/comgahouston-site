@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Terms of Service | Cơm Gà Houston',
+  title: 'Terms of Service',
   description: 'Terms of service for Cơm Gà Houston.',
   alternates: { canonical: 'https://www.comgahouston.com/terms' },
   robots: { index: false },

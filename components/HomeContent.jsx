@@ -14,7 +14,7 @@ const HOURS = [
   { day: 0, name: 'Sunday',    hours: '11:00 AM – 8:00 PM' },
 ]
 
-export default function HomeContent() {
+export default function HomeContent({ googleRating = { rating: 4.5, count: 143 } }) {
   const [activeMenuTab, setActiveMenuTab] = useState('chicken')
   const [today, setToday] = useState(-1)
 
@@ -35,7 +35,7 @@ export default function HomeContent() {
       <main id="main-content" className="pb-20 md:pb-0">
         {/* HERO */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 z-0 hero-ken-burns">
             <img
               src="/images/hero-vietnamese-food-spread.jpg"
               alt="A spread of Cơm Gà Houston dishes: phở, bánh mì, cơm gà, and more"
@@ -48,7 +48,7 @@ export default function HomeContent() {
           <div className="container relative z-10 mx-auto px-4 py-20 md:py-32 flex flex-col items-center text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-8">
               <MapPin size={14} className="text-primary" />
-              <span>Kansas City, Kansas</span>
+              <span>Olathe, KS · Kansas City Metro</span>
             </div>
 
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white font-bold leading-tight mb-6 max-w-5xl [text-shadow:_0_2px_10px_rgba(0,0,0,0.5)]">
@@ -81,16 +81,20 @@ export default function HomeContent() {
             {/* Proof line at the decision point */}
             <div className="flex items-center gap-2 text-white/90 text-sm font-medium mb-10">
               <div className="flex items-center gap-0.5 text-gold">
-                <span className="font-bold mr-1">4.8</span>
-                {[...Array(4)].map((_, i) => (
-                  <Star key={i} size={14} className="fill-gold" />
-                ))}
-                <div className="relative flex">
-                  <Star size={14} className="text-gold" />
-                  <div className="absolute inset-0 overflow-hidden" style={{ width: '80%' }}>
-                    <Star size={14} className="fill-gold text-gold" />
-                  </div>
-                </div>
+                <span className="font-bold mr-1">{googleRating.rating.toFixed(1)}</span>
+                {[...Array(5)].map((_, i) => {
+                  const fill = Math.min(1, Math.max(0, googleRating.rating - i))
+                  if (fill >= 1) return <Star key={i} size={14} className="fill-gold" />
+                  if (fill <= 0) return <Star key={i} size={14} className="text-gold" />
+                  return (
+                    <div key={i} className="relative flex">
+                      <Star size={14} className="text-gold" />
+                      <div className="absolute inset-0 overflow-hidden" style={{ width: `${fill * 100}%` }}>
+                        <Star size={14} className="fill-gold text-gold" />
+                      </div>
+                    </div>
+                  )
+                })}
               </div>
               <span className="italic">"Real Vietnamese taste... reminds me of home." – Thien N.</span>
             </div>
@@ -113,7 +117,7 @@ export default function HomeContent() {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x-0 md:divide-x divide-white/10">
               {[
-                { stat: '4.8★', label: 'Google Reviews', sub: 'Rated by Kansas City diners' },
+                { stat: `${googleRating.rating.toFixed(1)}★`, label: 'Google Reviews', sub: `${googleRating.count}+ ratings from KC diners` },
                 { stat: '5 AM', label: 'Broth O\'Clock', sub: 'When our phở starts simmering every day' },
                 { stat: '3', label: 'Generations', sub: 'Of family recipes on the menu' },
                 { stat: '~15 min', label: 'Pickup Time', sub: 'Order online, we\'ll have it ready' },
@@ -228,7 +232,7 @@ export default function HomeContent() {
                 </div>
                 <div className="space-y-6 text-lg text-foreground/80 mb-10">
                   <p>
-                    At Cơm Gà Houston, we believe that the best meals aren't just cooked, they're crafted with memories. Our recipes have been passed down through our family, preserving the authentic flavors of Vietnam right here in Kansas City, KS.
+                    At Cơm Gà Houston, we believe that the best meals aren't just cooked, they're crafted with memories. Our recipes have been passed down through our family, preserving the authentic flavors of Vietnam right here in Olathe, in the Kansas City metro.
                   </p>
                   <p>
                     From our signature cold-poached chicken rice infused with fragrant ginger oil, to our deeply comforting pho broths that simmer for hours, every dish is an invitation to our family table. We don't take shortcuts, because true flavor takes time.
@@ -364,7 +368,7 @@ export default function HomeContent() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">Some of the Best Vietnamese Food in KC</h2>
-            <p className="text-muted-foreground text-lg">Don't just take our word for it. 4.8 stars from Kansas City diners.</p>
+            <p className="text-muted-foreground text-lg">{"Don't just take our word for it."} {googleRating.rating.toFixed(1)} stars from Kansas City diners.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
@@ -375,13 +379,19 @@ export default function HomeContent() {
             ].map(({ quote, name }) => (
               <div key={name} className="bg-card p-8 rounded-2xl shadow-sm border border-border flex flex-col h-full">
                 <div className="flex gap-1 mb-6">
-                  {[...Array(4)].map((_, i) => <Star key={i} size={20} className="text-gold fill-gold" />)}
-                  <div className="relative flex">
-                    <Star size={20} className="text-gold" />
-                    <div className="absolute inset-0 overflow-hidden" style={{ width: '80%' }}>
-                      <Star size={20} className="text-gold fill-gold" />
-                    </div>
-                  </div>
+                  {[...Array(5)].map((_, i) => {
+                    const fill = Math.min(1, Math.max(0, googleRating.rating - i))
+                    if (fill >= 1) return <Star key={i} size={20} className="text-gold fill-gold" />
+                    if (fill <= 0) return <Star key={i} size={20} className="text-gold" />
+                    return (
+                      <div key={i} className="relative flex">
+                        <Star size={20} className="text-gold" />
+                        <div className="absolute inset-0 overflow-hidden" style={{ width: `${fill * 100}%` }}>
+                          <Star size={20} className="text-gold fill-gold" />
+                        </div>
+                      </div>
+                    )
+                  })}
                 </div>
                 <p className="font-serif italic text-xl text-foreground/90 mb-8 flex-grow">{quote}</p>
                 <div>
@@ -529,7 +539,7 @@ export default function HomeContent() {
               },
               {
                 q: 'Where can I find the best Vietnamese food in Kansas City?',
-                a: 'Kansas City locals consistently rate Cơm Gà Houston among the best Vietnamese food in KC, with 4.8 stars on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.',
+                a: `Kansas City locals consistently rate Cơm Gà Houston among the best Vietnamese food in KC, with ${googleRating.rating.toFixed(1)} stars on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.`,
               },
             ].map(({ q, a }) => (
               <div key={q} className="bg-card p-6 rounded-xl border border-border shadow-sm">

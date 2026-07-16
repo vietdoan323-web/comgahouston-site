@@ -3,7 +3,7 @@ import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { getAllPosts, formatDate } from '@/lib/blog'
 
 export const metadata = {
-  title: 'Blog | Vietnamese Food Stories – Cơm Gà Houston',
+  title: 'Blog | Vietnamese Food Stories',
   description:
     'Stories, recipes, and Vietnamese food culture from the Cơm Gà Houston kitchen in Olathe, KS. Learn about pho, banh mi, com ga, and more.',
   alternates: { canonical: 'https://www.comgahouston.com/blog' },

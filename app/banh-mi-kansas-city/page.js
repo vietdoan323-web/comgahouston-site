@@ -2,9 +2,9 @@ import Link from 'next/link'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Bánh Mì Kansas City | Authentic Vietnamese Sandwiches – Cơm Gà Houston',
+  title: 'Bánh Mì Kansas City | Authentic Vietnamese Sandwiches',
   description:
-    'The best Bánh Mì in Kansas City, KS. Crispy French baguette, house-made pâté, pickled daikon, and your choice of protein. Order online for fast pickup in Olathe.',
+    'The best Bánh Mì in Kansas City. Crispy French baguette, house-made pâté, pickled daikon, and your choice of protein. Order online for fast pickup in Olathe, KS.',
   alternates: { canonical: 'https://www.comgahouston.com/banh-mi-kansas-city' },
 }
 
@@ -20,7 +20,7 @@ export default function BanhMiPage() {
         </nav>
 
         <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6 leading-tight">
-          Authentic Bánh Mì in Kansas City, KS
+          Authentic Bánh Mì in Kansas City
         </h1>
         <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
           A perfect Bánh Mì is an art form: the right baguette and the right balance of savory meats, tangy pickled vegetables, and fresh herbs all in one bite. Cơm Gà Houston has been perfecting it for years.

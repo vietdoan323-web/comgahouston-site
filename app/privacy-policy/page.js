@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Privacy Policy | Cơm Gà Houston',
+  title: 'Privacy Policy',
   description: 'Privacy policy for Cơm Gà Houston, how we collect, use, and protect your information.',
   alternates: { canonical: 'https://www.comgahouston.com/privacy-policy' },
   robots: { index: false },

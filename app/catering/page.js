@@ -2,9 +2,9 @@ import Link from 'next/link'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Vietnamese Catering Kansas City | Cơm Gà Houston',
+  title: 'Vietnamese Catering Kansas City',
   description:
-    'Authentic Vietnamese catering in Kansas City, KS. Office lunches, family events, and private parties. Fresh Cơm Gà, Pho, Bánh Mì, and more. Contact us to plan your event.',
+    'Authentic Vietnamese catering in Olathe, KS, serving the Kansas City metro. Office lunches, family events, and private parties. Fresh Cơm Gà, Pho, Bánh Mì, and more.',
   alternates: { canonical: 'https://www.comgahouston.com/catering' },
 }
 

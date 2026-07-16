@@ -2,9 +2,9 @@ import Link from 'next/link'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Cơm Gà Kansas City | Vietnamese Chicken Rice – Cơm Gà Houston',
+  title: 'Cơm Gà Kansas City | Vietnamese Chicken Rice',
   description:
-    'The best Cơm Gà (Vietnamese chicken rice) in Kansas City, KS. Cold-poached chicken, fragrant jasmine rice, ginger oil, and house dipping sauce. Order online in Olathe.',
+    'The best Cơm Gà (Vietnamese chicken rice) in Kansas City. Cold-poached chicken, fragrant jasmine rice, ginger oil, and house dipping sauce. Order online in Olathe, KS.',
   alternates: { canonical: 'https://www.comgahouston.com/com-ga-kansas-city' },
 }
 

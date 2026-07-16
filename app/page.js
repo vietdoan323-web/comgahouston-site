@@ -1,9 +1,11 @@
 import HomeContent from '@/components/HomeContent'
+import { getAllPosts } from '@/lib/blog'
+import { getGoogleRating } from '@/lib/google-rating'
 
 export const metadata = {
   title: 'Best Vietnamese Food in Kansas City | Cơm Gà Houston – Olathe, KS',
   description:
-    'Looking for the best Vietnamese food in KC? Cơm Gà Houston serves signature chicken rice, fresh pho, and banh mi from family recipes. 4.8 stars on Google. Order online for pickup.',
+    'Looking for the best Vietnamese food in KC? Cơm Gà Houston serves signature chicken rice, fresh pho, and banh mi from family recipes. Top rated on Google. Order online for pickup.',
   alternates: {
     canonical: 'https://www.comgahouston.com/',
   },
@@ -62,12 +64,6 @@ const jsonLd = {
   paymentAccepted: 'Cash, Credit Card',
   hasMenu: 'https://www.comgahouston.com/menu',
   acceptsReservations: 'false',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.8',
-    bestRating: '5',
-    ratingCount: '150',
-  },
   sameAs: [
     'https://www.facebook.com/ComGaHoustonKansas/',
     'https://www.instagram.com/comgahouston_ks/',
@@ -124,13 +120,15 @@ const faqJsonLd = {
       name: 'Where can I find the best Vietnamese food in Kansas City?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Kansas City locals consistently rate Cơm Gà Houston among the best Vietnamese food in KC, with 4.8 stars on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.',
+        text: 'Kansas City locals consistently rate Cơm Gà Houston among the best Vietnamese food in KC, top rated on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.',
       },
     },
   ],
 }
 
-export default function Page() {
+export default async function Page() {
+  const googleRating = await getGoogleRating()
+
   return (
     <>
       <script
@@ -141,7 +139,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <HomeContent />
+      <HomeContent googleRating={googleRating} />
     </>
   )
 }

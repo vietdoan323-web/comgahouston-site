@@ -2,7 +2,7 @@ import Link from 'next/link'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
-  title: 'Best Pho in Kansas City, KS | Cơm Gà Houston',
+  title: 'Best Pho in Kansas City',
   description:
     'Authentic Vietnamese pho in Olathe, KS. Our Phở Gà (chicken pho) and Phở Bò (beef pho) are made with broths simmered for hours. Order online or visit us.',
   alternates: { canonical: 'https://www.comgahouston.com/pho-kansas-city' },
@@ -44,7 +44,7 @@ export default function PhoPage() {
           </nav>
 
           <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6 leading-tight">
-            Authentic Vietnamese Pho in Kansas City, KS
+            Authentic Vietnamese Pho in Kansas City
           </h1>
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
             Craving a soul-warming bowl of pho near Kansas City? At Cơm Gà Houston in Olathe, KS, we simmer our broths for hours using traditional Vietnamese recipes, no shortcuts, just real flavor.

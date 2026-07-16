@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Contact Cơm Gà Houston | Olathe, KS Vietnamese Restaurant',
+  title: 'Contact | Olathe, KS Vietnamese Restaurant',
   description:
     'Contact Cơm Gà Houston in Olathe, KS. Address: 15204 W 119th St, Olathe KS 66062. Phone: (913) 232-8306. Open Mon, Wed–Sat 11AM–9PM, Sun 11AM–8PM. Closed Tuesdays.',
   alternates: { canonical: 'https://www.comgahouston.com/contact' },

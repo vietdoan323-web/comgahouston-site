@@ -34,7 +34,7 @@ export default function Header() {
                 Cơm Gà Houston
               </span>
               <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
-                Kansas City, KS · Vietnamese Cuisine
+                Olathe, KS · Kansas City Metro
               </span>
             </div>
           </Link>
