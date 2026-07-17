@@ -42,6 +42,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
               alt="A spread of Cơm Gà Houston dishes: phở, bánh mì, cơm gà, and more"
               fill
               priority
+              fetchPriority="high"
               sizes="100vw"
               className="object-cover"
             />
