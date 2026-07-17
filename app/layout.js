@@ -34,14 +34,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero-vietnamese-food-spread.jpg"
-          fetchPriority="high"
-        />
-      </head>
       <body className={`${playfair.variable} ${inter.variable} font-sans bg-background text-foreground min-h-screen`}>
         <Header />
         {children}

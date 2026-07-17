@@ -5,7 +5,7 @@ const nextConfig = {
   },
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    optimizeCss: true,
+    inlineCss: true,
   },
   async redirects() {
     return [

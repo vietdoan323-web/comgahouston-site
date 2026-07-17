@@ -44,6 +44,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
               priority
               fetchPriority="high"
               sizes="100vw"
+              quality={65}
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80" />

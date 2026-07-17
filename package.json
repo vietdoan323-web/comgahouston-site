@@ -8,9 +8,14 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "browserslist": [
+    "chrome 111",
+    "edge 111",
+    "firefox 111",
+    "safari 16.4"
+  ],
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
-    "critters": "^0.0.23",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.513.0",
     "marked": "^18.0.6",
