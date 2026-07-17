@@ -57,7 +57,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-muted transition-colors"
+            className="p-3 rounded-full hover:bg-muted transition-colors"
             aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
           >
             {theme === 'light' ? <Moon size={20} /> : <Sun size={20} />}
@@ -71,7 +71,7 @@ export default function Header() {
             Order Online
           </a>
           <button
-            className="md:hidden p-2 rounded-md hover:bg-muted transition-colors"
+            className="md:hidden p-3 rounded-md hover:bg-muted transition-colors"
             onClick={() => setIsMobileMenuOpen(o => !o)}
             aria-label="Toggle menu"
           >

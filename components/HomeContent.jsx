@@ -272,7 +272,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
               </p>
             </div>
 
-            <div className="flex overflow-x-auto hide-scrollbar mb-12 border-b border-border" role="tablist">
+            <div className="flex overflow-x-auto hide-scrollbar mb-12 border-b border-border" role="tablist" aria-label="Menu categories">
               <div className="flex space-x-8 mx-auto px-4 whitespace-nowrap">
                 {[
                   { id: 'chicken',  label: '🍚 Chicken Rice' },
@@ -298,7 +298,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
               </div>
             </div>
 
-            <div role="tabpanel" className="max-w-4xl mx-auto animate-in fade-in duration-500">
+            <div role="tabpanel" aria-label={`${activeMenuTab} menu items`} className="max-w-4xl mx-auto animate-in fade-in duration-500">
               {activeMenuTab === 'chicken' && (
                 <div className="grid gap-6">
                   <MenuItem img="/images/com-ga-dark-white-chicken-rice.png" alt="Cơm Gà Dark & White" title="Cơm Gà Dark &amp; White" sub="Signature Chicken Rice" desc="Signature cold-poached chicken over fragrant jasmine rice with ginger oil, fresh herbs, and house dipping sauce." price="$16.95" />
@@ -626,7 +626,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
                     href="https://comgahoustonolathe.toast.site/order"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-white hover:bg-primary-hover transition-colors w-full mt-2"
+                    className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-white hover:bg-primary-hover transition-colors w-full mt-2"
                   >
                     Order Now
                   </a>
@@ -647,7 +647,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
           <a
             href="tel:9132328306"
             aria-label="Call Cơm Gà Houston at (913) 232-8306"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/25 text-white hover:bg-white/10 transition-colors"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-white/25 text-white hover:bg-white/10 transition-colors"
           >
             <Phone size={18} />
           </a>
@@ -655,7 +655,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
             href="https://comgahoustonolathe.toast.site/order"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary-hover transition-colors"
+            className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-white hover:bg-primary-hover transition-colors"
           >
             Order Now
           </a>
