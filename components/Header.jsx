@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Moon, Sun } from 'lucide-react'
 
 export default function Header() {
@@ -24,16 +25,18 @@ export default function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Link href="/" className="flex items-center gap-2 group" aria-label="Cơm Gà Houston Home">
-            <img
+            <Image
               src="/images/logo.png"
               alt="Cơm Gà Houston Logo"
+              width={48}
+              height={48}
               className="h-12 w-auto object-contain"
             />
             <div className="hidden sm:flex flex-col">
               <span className="font-serif font-bold text-lg leading-tight group-hover:text-primary transition-colors">
                 Cơm Gà Houston
               </span>
-              <span className="text-[10px] text-muted-foreground uppercase tracking-wider">
+              <span className="text-[10px] text-foreground/60 uppercase tracking-wider">
                 Olathe, KS · Kansas City Metro
               </span>
             </div>

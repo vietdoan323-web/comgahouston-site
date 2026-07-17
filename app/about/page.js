@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
@@ -25,11 +26,13 @@ export default function AboutPage() {
 
         <div className="relative mb-16">
           <div className="absolute inset-0 bg-gold/20 rounded-2xl transform translate-x-3 translate-y-3" />
-          <img
+          <Image
             src="/images/family-kitchen-story.png"
             alt="The Cơm Gà Houston family kitchen"
+            width={1408}
+            height={768}
+            priority
             className="relative z-10 w-full h-80 object-cover rounded-2xl shadow-lg"
-            loading="eager"
           />
         </div>
 

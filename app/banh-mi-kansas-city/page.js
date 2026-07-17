@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
@@ -28,18 +29,21 @@ export default function BanhMiPage() {
 
         <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm mb-12">
           <div className="relative h-96 overflow-hidden">
-            <img
+            <Image
               src="/images/banh-mi-vietnamese-sandwich.jpg"
               alt=""
-              aria-hidden="true"
-              className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-50"
-              loading="eager"
+              aria-hidden={true}
+              fill
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-cover blur-xl scale-110 opacity-50"
             />
-            <img
+            <Image
               src="/images/banh-mi-vietnamese-sandwich.jpg"
               alt="Bánh Mì – Vietnamese Sandwich at Cơm Gà Houston"
-              className="relative w-full h-full object-contain"
-              loading="eager"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 896px"
+              className="object-contain"
             />
           </div>
           <div className="p-8">

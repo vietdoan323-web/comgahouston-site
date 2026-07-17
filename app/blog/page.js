@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { getAllPosts, formatDate } from '@/lib/blog'
 
@@ -33,11 +34,12 @@ export default function BlogPage() {
           {posts.map(({ slug, title, excerpt, date, category, image }) => (
             <Link key={slug} href={`/blog/${slug}`} className="bg-card rounded-xl overflow-hidden shadow-md border border-border group hover:shadow-lg transition-all flex flex-col">
               <div className="relative h-48 overflow-hidden">
-                <img
+                <Image
                   src={image}
                   alt={title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <span className="absolute top-4 left-4 bg-dark/80 text-gold text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
                   {category}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Star, MapPin, Clock, ChevronRight, Phone } from 'lucide-react'
 
 const HOURS = [
@@ -36,11 +37,13 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
         {/* HERO */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0 hero-ken-burns">
-            <img
+            <Image
               src="/images/hero-vietnamese-food-spread.jpg"
               alt="A spread of Cơm Gà Houston dishes: phở, bánh mì, cơm gà, and more"
-              className="w-full h-full object-cover"
-              loading="eager"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80" />
           </div>
@@ -124,7 +127,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
               ].map(({ stat, label, sub }) => (
                 <div key={label} className="flex flex-col items-center text-center px-4">
                   <span className="font-serif text-4xl text-gold mb-2">{stat}</span>
-                  <h3 className="font-semibold text-lg mb-1">{label}</h3>
+                  <p className="font-semibold text-lg mb-1">{label}</p>
                   <p className="text-sm text-white/70">{sub}</p>
                 </div>
               ))}
@@ -141,13 +144,13 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
             </div>
 
             <div className="max-w-sm mx-auto mb-12">
-              <img
+              <Image
                 src="/images/lunch-specials-flyer.jpg"
                 alt="Cơm Gà Houston lunch specials: dine-in only, 11AM to 3PM, includes a free drink, starting at $11.99"
                 width={1080}
                 height={1350}
+                sizes="(max-width: 640px) 100vw, 384px"
                 className="w-full rounded-2xl shadow-lg"
-                loading="lazy"
               />
             </div>
 
@@ -180,9 +183,9 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
               ].map(({ img, alt, price, title, sub, desc }) => (
                 <div key={title} className="bg-card rounded-xl overflow-hidden shadow-md border border-border group hover:shadow-lg transition-all">
                   <div className="relative h-56 overflow-hidden">
-                    <img src={img} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-50" loading="lazy" />
-                    <img src={img} alt={alt} className="relative w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                    <div className="absolute top-4 right-4 bg-primary text-primary-foreground font-bold px-3 py-1 rounded-full shadow-md">{price}</div>
+                    <Image src={img} alt="" aria-hidden="true" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover blur-xl scale-110 opacity-50" />
+                    <Image src={img} alt={alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-contain group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute top-4 right-4 bg-primary text-primary-foreground font-bold px-3 py-1 rounded-full shadow-md z-10">{price}</div>
                   </div>
                   <div className="p-6">
                     <h3 className="font-serif text-2xl text-foreground mb-1">{title}</h3>
@@ -213,11 +216,13 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
             <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
               <div className="w-full lg:w-1/2 relative">
                 <div className="absolute inset-0 bg-gold/20 rounded-2xl transform translate-x-4 translate-y-4" />
-                <img
+                <Image
                   src="/images/family-kitchen-story.png"
                   alt="Vietnamese family kitchen"
+                  width={1408}
+                  height={768}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="relative z-10 w-full h-[500px] object-cover rounded-2xl shadow-lg"
-                  loading="lazy"
                 />
               </div>
 
@@ -446,7 +451,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
             ].map(({ title, category, img, href }) => (
               <Link key={title} href={href} className="bg-card rounded-xl overflow-hidden shadow-md border border-border group hover:shadow-lg transition-all block">
                 <div className="relative h-44 overflow-hidden">
-                  <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                  <Image src={img} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <span className="absolute top-4 left-4 bg-dark/80 text-gold text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
                     {category}
                   </span>
@@ -665,7 +670,7 @@ function MenuItem({ img, alt, title, sub, desc, price }) {
   return (
     <div className="flex justify-between items-start p-4 sm:p-6 bg-card rounded-xl border border-border hover:border-primary/30 transition-colors shadow-sm">
       <div className="flex gap-4">
-        <img src={img} alt={alt} className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg object-cover shrink-0" loading="lazy" />
+        <Image src={img} alt={alt} width={96} height={96} sizes="96px" className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg object-cover shrink-0" />
         <div className="pr-2 sm:pr-4">
           <h3 className="font-serif text-xl sm:text-2xl text-foreground mb-1">{title}</h3>
           <p className="text-xs sm:text-sm text-primary font-medium mb-2">{sub}</p>

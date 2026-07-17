@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { getAllPosts, getPost, formatDate } from '@/lib/blog'
@@ -79,11 +80,13 @@ export default async function BlogPost({ params }) {
           {post.title}
         </h1>
 
-        <img
+        <Image
           src={post.image}
           alt={post.imageAlt}
+          width={1200}
+          height={480}
           className="w-full rounded-2xl shadow-md mb-12 object-cover max-h-[480px]"
-          loading="eager"
+          priority
         />
 
         <div

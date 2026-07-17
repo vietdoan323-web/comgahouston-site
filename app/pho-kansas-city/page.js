@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
@@ -52,11 +53,12 @@ export default function PhoPage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm">
-              <img
+              <Image
                 src="/images/pho-ga-chicken-pho.png"
                 alt="Phở Gà – Chicken Pho at Cơm Gà Houston"
+                width={720}
+                height={705}
                 className="w-full h-56 object-cover"
-                loading="eager"
               />
               <div className="p-6">
                 <h2 className="font-serif text-2xl text-foreground mb-2">Phở Gà – Chicken Pho</h2>
@@ -68,11 +70,12 @@ export default function PhoPage() {
             </div>
 
             <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm">
-              <img
+              <Image
                 src="/images/pho-bo.jpg"
                 alt="Phở Bò – Beef Pho at Cơm Gà Houston"
+                width={1600}
+                height={900}
                 className="w-full h-56 object-cover"
-                loading="lazy"
               />
               <div className="p-6">
                 <h2 className="font-serif text-2xl text-foreground mb-2">Phở Bò – Beef Pho</h2>

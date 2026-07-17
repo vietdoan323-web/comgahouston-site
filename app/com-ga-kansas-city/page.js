@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata = {
@@ -71,7 +72,7 @@ export default function ComGaPage() {
                 },
               ].map(({ img, name, price, desc }) => (
                 <div key={name} className="flex gap-6 bg-card rounded-xl border border-border p-6 shadow-sm hover:border-primary/30 transition-colors">
-                  <img src={img} alt={name} className="w-28 h-28 rounded-lg object-cover shrink-0" loading="lazy" />
+                  <Image src={img} alt={name} width={112} height={112} className="w-28 h-28 rounded-lg object-cover shrink-0" />
                   <div>
                     <h3 className="font-serif text-2xl text-foreground mb-1">{name}</h3>
                     <p className="text-primary font-semibold mb-2">{price}</p>

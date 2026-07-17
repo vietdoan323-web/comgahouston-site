@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Star, MapPin, Clock, Phone, ChevronRight } from 'lucide-react'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 import { getGoogleRating } from '@/lib/google-rating'
@@ -74,11 +75,13 @@ export default async function VietnameseFoodOverlandParkPage() {
         {/* HERO */}
         <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               src="/images/hero-vietnamese-food-spread.jpg"
               alt="A spread of Vietnamese dishes at Com Ga Houston"
-              className="w-full h-full object-cover"
-              loading="eager"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80" />
           </div>
@@ -189,11 +192,12 @@ export default async function VietnameseFoodOverlandParkPage() {
 
             <div className="grid md:grid-cols-2 gap-8 mb-10">
               <Link href="/com-ga-kansas-city" className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm group hover:shadow-lg transition-all block">
-                <img
+                <Image
                   src="/images/com-ga-dark-white-chicken-rice.png"
                   alt="Com Ga - Signature Chicken Rice"
+                  width={720}
+                  height={710}
                   className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="font-serif text-2xl text-foreground mb-2 group-hover:text-primary transition-colors">Com Ga</h3>
@@ -203,11 +207,12 @@ export default async function VietnameseFoodOverlandParkPage() {
               </Link>
 
               <Link href="/pho-kansas-city" className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm group hover:shadow-lg transition-all block">
-                <img
+                <Image
                   src="/images/pho-ga-chicken-pho.png"
                   alt="Pho Ga - Chicken Pho"
+                  width={720}
+                  height={705}
                   className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="font-serif text-2xl text-foreground mb-2 group-hover:text-primary transition-colors">Pho</h3>
@@ -217,11 +222,12 @@ export default async function VietnameseFoodOverlandParkPage() {
               </Link>
 
               <Link href="/banh-mi-kansas-city" className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm group hover:shadow-lg transition-all block">
-                <img
+                <Image
                   src="/images/banh-mi-vietnamese-sandwich.jpg"
                   alt="Banh Mi - Vietnamese Sandwich"
+                  width={540}
+                  height={720}
                   className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="font-serif text-2xl text-foreground mb-2 group-hover:text-primary transition-colors">Banh Mi</h3>
@@ -231,11 +237,12 @@ export default async function VietnameseFoodOverlandParkPage() {
               </Link>
 
               <div className="bg-card rounded-2xl overflow-hidden border border-border shadow-sm">
-                <img
+                <Image
                   src="/images/bo-ne-sizzling-steak.jpg"
                   alt="Bo Ne - Sizzling Steak and Egg"
+                  width={800}
+                  height={800}
                   className="w-full h-56 object-cover"
-                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="font-serif text-2xl text-foreground mb-2">Bo Ne</h3>

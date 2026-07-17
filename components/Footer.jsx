@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Clock } from 'lucide-react'
 
 export default function Footer() {
@@ -8,14 +9,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div>
             <Link href="/" className="flex items-center gap-3 mb-6" aria-label="Cơm Gà Houston Home">
-              <img
+              <Image
                 src="/images/logo.png"
                 alt="Cơm Gà Houston Logo"
+                width={64}
+                height={64}
                 className="h-16 w-auto object-contain"
               />
               <div className="flex flex-col">
                 <span className="font-serif font-bold text-xl leading-tight">Cơm Gà Houston</span>
-                <span className="text-[10px] text-white/50 uppercase tracking-wider">Chicken · Rice · Noodles</span>
+                <span className="text-[10px] text-white/70 uppercase tracking-wider">Chicken · Rice · Noodles</span>
               </div>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6 max-w-sm">
