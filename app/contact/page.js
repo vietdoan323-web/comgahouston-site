@@ -1,3 +1,5 @@
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+
 export const metadata = {
   title: 'Contact | Olathe, KS Vietnamese Restaurant',
   description:
@@ -8,6 +10,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="py-20 bg-background">
+      <BreadcrumbSchema name="Contact" path="/contact" />
       <div className="container mx-auto px-4 max-w-5xl">
         <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Contact &amp; Visit</h1>
         <p className="text-xl text-muted-foreground mb-12">We'd love to see you. Here's everything you need to find us.</p>
