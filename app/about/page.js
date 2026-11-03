@@ -64,9 +64,14 @@ export default function AboutPage() {
             <a href="https://comgahoustonolathe.toast.site/order" target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-base font-semibold text-white hover:bg-primary-hover transition-colors">
               Order Online
             </a>
-            <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md border-2 border-primary px-8 text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
+            <a
+              href="https://www.google.com/maps?cid=14295853395954048914"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center rounded-md border-2 border-primary px-8 text-base font-semibold text-primary hover:bg-primary/5 transition-colors"
+            >
               Get Directions
-            </Link>
+            </a>
           </div>
         </div>
       </div>

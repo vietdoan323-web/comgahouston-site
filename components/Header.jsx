@@ -3,11 +3,18 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, Moon, Sun } from 'lucide-react'
+import { Menu, X, Moon, Sun, Phone } from 'lucide-react'
 
 export default function Header() {
   const [theme, setTheme] = useState('light')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  // Follow the visitor's OS preference, and remember an explicit choice.
+  useEffect(() => {
+    const saved = window.localStorage.getItem('theme')
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    setTheme(saved === 'dark' || saved === 'light' ? saved : prefersDark ? 'dark' : 'light')
+  }, [])
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
@@ -16,6 +23,7 @@ export default function Header() {
     } else {
       document.documentElement.classList.remove('dark')
     }
+    window.localStorage.setItem('theme', theme)
   }, [theme])
 
   const toggleTheme = () => setTheme(t => (t === 'light' ? 'dark' : 'light'))
@@ -55,6 +63,13 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href="tel:9132328306"
+            className="hidden md:inline-flex h-10 items-center rounded-md px-3 text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
+            <Phone size={16} className="mr-2 text-primary" />
+            (913) 232-8306
+          </a>
           <button
             onClick={toggleTheme}
             className="p-3 rounded-full hover:bg-muted transition-colors"

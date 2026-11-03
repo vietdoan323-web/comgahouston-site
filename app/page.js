@@ -1,18 +1,19 @@
 import HomeContent from '@/components/HomeContent'
 import { getAllPosts } from '@/lib/blog'
 import { getGoogleRating } from '@/lib/google-rating'
+import { restaurantJsonLd, websiteJsonLd } from '@/lib/restaurant-schema'
 
 export const metadata = {
-  title: 'Best Vietnamese Food in Kansas City | Cơm Gà Houston – Olathe, KS',
+  title: 'Cơm Gà Houston | Vietnamese Restaurant in Olathe, KS',
   description:
-    'Looking for the best Vietnamese food in KC? Cơm Gà Houston serves signature chicken rice, fresh pho, and banh mi from family recipes. Top rated on Google. Order online for pickup.',
+    'Family-owned Vietnamese restaurant in Olathe, KS serving the Kansas City metro. Signature cơm gà chicken rice, pho, and bánh mì from family recipes. Order online for pickup.',
   alternates: {
     canonical: 'https://www.comgahouston.com/',
   },
   openGraph: {
-    title: 'Best Vietnamese Food in Kansas City | Cơm Gà Houston',
+    title: 'Cơm Gà Houston | Vietnamese Restaurant in Olathe, KS',
     description:
-      'Family-owned Vietnamese restaurant in Olathe, KS serving some of the best Vietnamese food in KC. Signature Cơm Gà, fresh Pho, Bánh Mì, and more.',
+      'Family-owned Vietnamese restaurant in Olathe, KS serving the Kansas City metro. Signature Cơm Gà, fresh Phở, Bánh Mì, and more.',
     url: 'https://www.comgahouston.com/',
     images: [
       {
@@ -25,56 +26,7 @@ export const metadata = {
   },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Restaurant',
-  name: 'Cơm Gà Houston',
-  description:
-    'Family-owned restaurant serving some of the best Vietnamese food in Kansas City: signature chicken rice, pho, banh mi, and traditional family recipes in Olathe, KS.',
-  url: 'https://www.comgahouston.com',
-  telephone: '+19132328306',
-  image:
-    'https://www.comgahouston.com/images/hero-vietnamese-food-spread.jpg',
-  logo:
-    'https://www.comgahouston.com/images/logo.png',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '15204 W 119th St',
-    addressLocality: 'Olathe',
-    addressRegion: 'KS',
-    postalCode: '66062',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 38.9106,
-    longitude: -94.7674,
-  },
-  openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday',    opens: '11:00', closes: '21:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '11:00', closes: '21:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday',  opens: '11:00', closes: '21:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday',    opens: '11:00', closes: '21:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday',  opens: '11:00', closes: '21:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday',    opens: '11:00', closes: '20:00' },
-  ],
-  servesCuisine: ['Vietnamese'],
-  priceRange: '$$',
-  currenciesAccepted: 'USD',
-  paymentAccepted: 'Cash, Credit Card',
-  hasMenu: 'https://www.comgahouston.com/menu',
-  acceptsReservations: 'false',
-  sameAs: [
-    'https://www.facebook.com/ComGaHoustonKansas/',
-    'https://www.instagram.com/comgahouston_ks/',
-    'https://www.tiktok.com/@comgakansas',
-  ],
-  areaServed: [
-    { '@type': 'City', name: 'Olathe', '@id': 'https://www.wikidata.org/wiki/Q485196' },
-    { '@type': 'City', name: 'Overland Park', '@id': 'https://www.wikidata.org/wiki/Q738142' },
-    { '@type': 'Place', name: 'Kansas City metro' },
-  ],
-}
+const jsonLd = restaurantJsonLd
 
 const faqJsonLd = {
   '@context': 'https://schema.org',
@@ -125,7 +77,7 @@ const faqJsonLd = {
       name: 'Where can I find the best Vietnamese food in Kansas City?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Kansas City locals consistently rate Cơm Gà Houston among the best Vietnamese food in KC, top rated on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.',
+        text: 'Kansas City diners rate Cơm Gà Houston highly on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.',
       },
     },
   ],
@@ -143,6 +95,10 @@ export default async function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
       <HomeContent googleRating={googleRating} />
     </>

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Star, MapPin, Clock, ChevronRight, Phone } from 'lucide-react'
+import { GOOGLE_PLACE_URL } from '@/lib/restaurant-schema'
 
 const HOURS = [
   { day: 1, name: 'Monday',    hours: '11:00 AM – 9:00 PM' },
@@ -37,16 +38,19 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
         {/* HERO */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0 hero-ken-burns">
-            <Image
-              src="/images/hero-vietnamese-food-spread.jpg"
-              alt="A spread of Cơm Gà Houston dishes: phở, bánh mì, cơm gà, and more"
-              fill
-              priority
-              fetchPriority="high"
-              sizes="100vw"
-              quality={65}
-              className="object-cover"
-            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <picture>
+              <source media="(min-width: 768px)" srcSet="/images/hero-desktop.avif" type="image/avif" />
+              <source srcSet="/images/hero-mobile.avif" type="image/avif" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/hero-mobile.avif"
+                alt="A spread of Cơm Gà Houston dishes: phở, bánh mì, cơm gà, and more"
+                fetchPriority="high"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80" />
           </div>
 
@@ -411,7 +415,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
 
           <div className="text-center">
             <a
-              href="https://www.google.com/maps/search/Com+Ga+Houston+Olathe+KS"
+              href={GOOGLE_PLACE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-12 items-center justify-center rounded-md bg-transparent border border-border px-6 text-base font-medium text-foreground hover:bg-muted transition-colors group"
@@ -546,7 +550,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
               },
               {
                 q: 'Where can I find the best Vietnamese food in Kansas City?',
-                a: `Kansas City locals consistently rate Cơm Gà Houston among the best Vietnamese food in KC, with ${googleRating.rating.toFixed(1)} stars on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.`,
+                a: `Kansas City diners rate Cơm Gà Houston ${googleRating.rating.toFixed(1)} stars on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.`,
               },
             ].map(({ q, a }) => (
               <div key={q} className="bg-card p-6 rounded-xl border border-border shadow-sm">
@@ -723,7 +727,7 @@ function VipForm() {
       {[
         { id: 'name',  label: 'Full Name',     type: 'text',  placeholder: 'John Doe' },
         { id: 'email', label: 'Email Address', type: 'email', placeholder: 'john@example.com' },
-        { id: 'phone', label: 'Phone Number',  type: 'tel',   placeholder: '(913) 555-0123', required: false },
+        { id: 'phone', label: 'Phone Number',  type: 'tel',   placeholder: 'Mobile number (optional)', required: false },
       ].map(({ id, label, type, placeholder, required = true }) => (
         <div key={id}>
           <label htmlFor={id} className="block text-sm font-medium text-foreground mb-1">{label}</label>

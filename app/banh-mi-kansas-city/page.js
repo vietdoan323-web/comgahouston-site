@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import { restaurantJsonLd } from '@/lib/restaurant-schema'
 
 export const metadata = {
   title: 'Bánh Mì Kansas City | Authentic Vietnamese Sandwiches',
   description:
-    'The best Bánh Mì in Kansas City. Crispy French baguette, house-made pâté, pickled daikon, and your choice of protein. Order online for fast pickup in Olathe, KS.',
+    'Bánh Mì in Kansas City with a crispy French baguette, house-made pâté, pickled daikon, and your choice of protein. Order online for fast pickup in Olathe, KS.',
   alternates: { canonical: 'https://www.comgahouston.com/banh-mi-kansas-city' },
 }
 
@@ -13,6 +14,10 @@ export default function BanhMiPage() {
   return (
     <main className="py-20 bg-background">
       <BreadcrumbSchema name="Bánh Mì Kansas City" path="/banh-mi-kansas-city" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(restaurantJsonLd) }}
+      />
       <div className="container mx-auto px-4 max-w-4xl">
         <nav className="text-sm text-muted-foreground mb-8">
           <Link href="/" className="hover:text-primary transition-colors">Home</Link>

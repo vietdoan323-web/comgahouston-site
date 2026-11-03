@@ -64,6 +64,73 @@ export default function ContactPage() {
             Order Online for Pickup
           </a>
         </div>
+
+        <section className="mt-16">
+          <h2 className="font-serif text-3xl text-foreground mb-6">Other Ways to Reach Us</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-card rounded-2xl p-6 border border-border shadow-sm">
+              <h3 className="font-serif text-xl text-foreground mb-3">Order Online</h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Pickup orders go through Toast and are typically ready in about 15 minutes. The
+                full menu is available online, including lunch specials during weekday hours.
+              </p>
+              <a
+                href="https://comgahoustonolathe.toast.site/order"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-medium hover:underline"
+              >
+                Order on Toast
+              </a>
+            </div>
+            <div className="bg-card rounded-2xl p-6 border border-border shadow-sm">
+              <h3 className="font-serif text-xl text-foreground mb-3">Follow Us</h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Daily specials and behind-the-scenes posts from the kitchen on Facebook, Instagram,
+                and TikTok.
+              </p>
+              <div className="flex flex-col gap-1 text-sm">
+                <a href="https://www.facebook.com/ComGaHoustonKansas/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Facebook</a>
+                <a href="https://www.instagram.com/comgahouston_ks/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Instagram</a>
+                <a href="https://www.tiktok.com/@comgakansas" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">TikTok</a>
+              </div>
+            </div>
+            <div className="bg-card rounded-2xl p-6 border border-border shadow-sm">
+              <h3 className="font-serif text-xl text-foreground mb-3">Large Groups</h3>
+              <p className="text-muted-foreground text-sm mb-4">
+                Feeding an office or a family gathering? We scale our regular menu to your
+                headcount and budget.
+              </p>
+              <a href="/catering" className="text-primary font-medium hover:underline">
+                See catering options
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-16 bg-surface rounded-2xl p-8 border border-border">
+          <h2 className="font-serif text-3xl text-foreground mb-6">Finding Us</h2>
+          <div className="space-y-4 text-lg text-foreground/80">
+            <p>
+              We are at 15204 W 119th St in Olathe, Kansas, in the Kansas City metro. The
+              restaurant is easy to reach from Overland Park and the surrounding Johnson County
+              communities. If you are coming from out of town, the interactive map above will
+              get you to our door.
+            </p>
+            <p>
+              A few notes for your visit: we are closed Tuesdays, and our dine-in lunch specials
+              with a free drink run Monday through Saturday, 11 AM to 3 PM. Sunday hours are
+              slightly shorter, 11 AM to 8 PM. If you want food fast, online pickup orders are
+              usually ready in about 15 minutes.
+            </p>
+            <p>
+              Questions about the menu, allergens, or what to order first? Call us at{' '}
+              <a href="tel:9132328306" className="text-primary hover:underline">(913) 232-8306</a> during
+              open hours and our staff will happily point you in the right direction. First time
+              eating Vietnamese food? Tell us — recommending dishes is the best part of the job.
+            </p>
+          </div>
+        </section>
       </div>
     </main>
   )

@@ -1,19 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import { restaurantRef } from '@/lib/restaurant-schema'
 
 export const metadata = {
-  title: 'Best Pho in Kansas City',
+  title: 'Pho in Kansas City, KS',
   description:
     'Authentic Vietnamese pho in Olathe, KS. Our Phở Gà (chicken pho) and Phở Bò (beef pho) are made with broths simmered for hours. Order online or visit us.',
   alternates: { canonical: 'https://www.comgahouston.com/pho-kansas-city' },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FoodEstablishment',
-  name: 'Cơm Gà Houston',
-  servesCuisine: ['Vietnamese'],
+const jsonLd = restaurantRef({
   hasMenuItem: [
     {
       '@type': 'MenuItem',
@@ -28,7 +25,7 @@ const jsonLd = {
       offers: { '@type': 'Offer', price: '17.99', priceCurrency: 'USD' },
     },
   ],
-}
+})
 
 export default function PhoPage() {
   return (
