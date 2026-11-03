@@ -119,9 +119,9 @@ export default function ContactPage() {
             </p>
             <p>
               A few notes for your visit: we are closed Tuesdays, and our dine-in lunch specials
-              with a free drink run Monday through Saturday, 11 AM to 3 PM. Sunday hours are
-              slightly shorter, 11 AM to 8 PM. If you want food fast, online pickup orders are
-              usually ready in about 15 minutes.
+              with a free drink run Monday and Wednesday through Saturday, 11 AM to 3 PM. Sunday
+              hours are slightly shorter, 11 AM to 8 PM. If you want food fast, online pickup
+              orders are usually ready in about 15 minutes.
             </p>
             <p>
               Questions about the menu, allergens, or what to order first? Call us at{' '}

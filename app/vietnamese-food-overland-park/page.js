@@ -137,7 +137,7 @@ export default async function VietnameseFoodOverlandParkPage() {
                 We also bake fresh banh mi baguettes daily, loaded with house-marinated meats, silky pate, pickled daikon, and fresh herbs. Pair one with a Vietnamese iced coffee for the full experience.
               </p>
               <p>
-                Looking for a weekday lunch deal? Our dine-in lunch specials run Monday through Saturday, 11 AM to 3 PM, and include a free drink with your meal.
+                Looking for a weekday lunch deal? Our dine-in lunch specials run Monday and Wednesday through Saturday, 11 AM to 3 PM (closed Tuesdays), and include a free drink with your meal.
               </p>
             </div>
           </div>

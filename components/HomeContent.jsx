@@ -146,7 +146,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="font-serif text-4xl md:text-5xl text-foreground mb-4">Dine-In Lunch Specials</h2>
-              <p className="text-muted-foreground text-lg">Mon–Sat 11AM–3PM, dine-in only. Includes a free drink.</p>
+              <p className="text-muted-foreground text-lg">Mon, Wed–Sat 11AM–3PM, dine-in only. Includes a free drink. (We're closed Tuesdays.)</p>
             </div>
 
             <div className="max-w-sm mx-auto mb-12">
@@ -549,6 +549,10 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
                 a: 'We do our best to accommodate dietary preferences. Let us know any dietary restrictions when you visit or order and our staff will guide you.',
               },
               {
+                q: 'Are you located in Houston, Texas?',
+                a: 'No — Houston is part of our brand name, not our location. Cơm Gà Houston is a Vietnamese restaurant at 15204 W 119th St, Olathe, KS 66062, serving the Kansas City metro.',
+              },
+              {
                 q: 'Where can I find the best Vietnamese food in Kansas City?',
                 a: `Kansas City diners rate Cơm Gà Houston ${googleRating.rating.toFixed(1)} stars on Google. Our signature cơm gà chicken rice, slow-simmered pho, and fresh bánh mì are made daily from family recipes at 15204 W 119th St in Olathe.`,
               },
@@ -611,7 +615,7 @@ export default function HomeContent({ googleRating = { rating: 4.5, count: 143 }
                 </ul>
                 <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-sm text-foreground/80">
                   <span className="font-semibold text-primary block mb-1">Lunch Specials</span>
-                  Dine-in specials available Mon–Sat 11AM–3PM
+                  Dine-in specials available Mon, Wed–Sat 11AM–3PM
                 </div>
               </div>
 

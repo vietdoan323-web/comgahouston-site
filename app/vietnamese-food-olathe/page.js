@@ -83,8 +83,8 @@ export default function OlathePage() {
                 <li className="flex justify-between"><span>Sunday</span><span>11 AM – 8 PM</span></li>
               </ul>
               <p className="text-sm text-muted-foreground mt-4">
-                Dine-in lunch specials run Monday through Saturday, 11 AM to 3 PM, with a free
-                drink included.
+                Dine-in lunch specials run Monday and Wednesday through Saturday, 11 AM to 3
+                PM, with a free drink included. We are closed Tuesdays.
               </p>
             </div>
             <div className="bg-card rounded-2xl p-6 border border-border shadow-sm">

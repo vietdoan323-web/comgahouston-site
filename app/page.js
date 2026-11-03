@@ -74,6 +74,14 @@ const faqJsonLd = {
     },
     {
       '@type': 'Question',
+      name: 'Are you located in Houston, Texas?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No — Houston is part of our brand name, not our location. Cơm Gà Houston is a Vietnamese restaurant at 15204 W 119th St, Olathe, KS 66062, serving the Kansas City metro.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Where can I find the best Vietnamese food in Kansas City?',
       acceptedAnswer: {
         '@type': 'Answer',
