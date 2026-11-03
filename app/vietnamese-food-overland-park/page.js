@@ -137,7 +137,7 @@ export default async function VietnameseFoodOverlandParkPage() {
                 We also bake fresh banh mi baguettes daily, loaded with house-marinated meats, silky pate, pickled daikon, and fresh herbs. Pair one with a Vietnamese iced coffee for the full experience.
               </p>
               <p>
-                Looking for a weekday lunch deal? Our dine-in lunch specials run Monday through Saturday, 11 AM to 3 PM, and include a free drink with your meal.
+                Looking for a weekday lunch deal? Our dine-in lunch specials run Monday and Wednesday through Saturday, 11 AM to 3 PM (closed Tuesdays), and include a free drink with your meal.
               </p>
             </div>
           </div>
@@ -344,7 +344,7 @@ export default async function VietnameseFoodOverlandParkPage() {
         {/* CTA BLOCK */}
         <section className="bg-primary py-16 text-white text-center">
           <div className="container mx-auto px-4">
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to Try the Best Vietnamese Food near Overland Park?</h2>
+            <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to Try Vietnamese Food near Overland Park?</h2>
             <p className="text-lg text-white/90 mb-4">15204 W 119th St, Olathe, KS 66062</p>
             <div className="flex items-center justify-center gap-2 text-white/80 text-sm mb-8">
               <Clock size={16} />

@@ -46,6 +46,7 @@ export default function Footer() {
               <li><Link href="/#reviews" className="text-white/70 hover:text-primary transition-colors py-3 inline-block">Reviews</Link></li>
               <li><Link href="/blog" className="text-white/70 hover:text-primary transition-colors py-3 inline-block">Blog</Link></li>
               <li><Link href="/vietnamese-food-overland-park" className="text-white/70 hover:text-primary transition-colors py-3 inline-block">Near Overland Park</Link></li>
+              <li><Link href="/vietnamese-food-olathe" className="text-white/70 hover:text-primary transition-colors py-3 inline-block">Vietnamese Food in Olathe</Link></li>
               <li><a href="https://comgahoustonolathe.toast.site/order" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-white transition-colors py-3 inline-block">Order Online</a></li>
             </ul>
           </div>
@@ -59,7 +60,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Clock size={20} className="text-primary shrink-0" />
-                <span>Open Daily (Closed Tuesdays)</span>
+                <span>Mon, Wed–Sat 11AM–9PM · Sun 11AM–8PM · Closed Tuesdays</span>
               </li>
               <li className="flex items-center gap-3">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>

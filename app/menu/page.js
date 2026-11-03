@@ -127,7 +127,7 @@ export default function MenuPage() {
 
         <div className="mt-16 text-center bg-primary/5 border border-primary/20 rounded-2xl p-8">
           <h2 className="font-serif text-3xl text-foreground mb-4">Ready to Order?</h2>
-          <p className="text-muted-foreground mb-6">Dine-in lunch specials Mon–Sat 11AM–3PM</p>
+          <p className="text-muted-foreground mb-6">Dine-in lunch specials Mon, Wed–Sat 11AM–3PM (closed Tuesdays)</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://comgahoustonolathe.toast.site/order"

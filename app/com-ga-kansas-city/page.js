@@ -1,25 +1,23 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import { restaurantRef } from '@/lib/restaurant-schema'
 
 export const metadata = {
-  title: 'Cơm Gà Kansas City | Vietnamese Chicken Rice',
+  title: 'Vietnamese Chicken Rice (Cơm Gà) in Kansas City',
   description:
-    'The best Cơm Gà (Vietnamese chicken rice) in Kansas City. Cold-poached chicken, fragrant jasmine rice, ginger oil, and house dipping sauce. Order online in Olathe, KS.',
+    'Cơm Gà (Vietnamese chicken rice) in Kansas City. Cold-poached chicken, fragrant jasmine rice, ginger oil, and house dipping sauce, made from family recipes. Order online in Olathe, KS.',
   alternates: { canonical: 'https://www.comgahouston.com/com-ga-kansas-city' },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FoodEstablishment',
-  name: 'Cơm Gà Houston',
+const jsonLd = restaurantRef({
   hasMenuItem: [
-    { '@type': 'MenuItem', name: 'Cơm Gà Dark & White', offers: { '@type': 'Offer', price: '16.95', priceCurrency: 'USD' } },
     { '@type': 'MenuItem', name: 'Cơm Gà White Chicken', offers: { '@type': 'Offer', price: '15.95', priceCurrency: 'USD' } },
+    { '@type': 'MenuItem', name: 'Cơm Gà Dark & White', offers: { '@type': 'Offer', price: '16.95', priceCurrency: 'USD' } },
     { '@type': 'MenuItem', name: 'Cơm Gà Dark Chicken', offers: { '@type': 'Offer', price: '17.95', priceCurrency: 'USD' } },
     { '@type': 'MenuItem', name: 'Houston Special Whole Chicken', offers: { '@type': 'Offer', price: '45.99', priceCurrency: 'USD' } },
   ],
-}
+})
 
 export default function ComGaPage() {
   return (
@@ -39,7 +37,7 @@ export default function ComGaPage() {
             Cơm Gà: Vietnamese Chicken Rice in Kansas City
           </h1>
           <p className="text-xl text-muted-foreground mb-12 leading-relaxed">
-            Cơm Gà is our namesake and our pride. This beloved Vietnamese dish, cold-poached chicken over fragrant rice cooked in chicken broth, is a study in simplicity done perfectly. Find the best Cơm Gà in Kansas City right here in Olathe, KS.
+            Cơm Gà is our namesake and our pride. This beloved Vietnamese dish, cold-poached chicken over fragrant rice cooked in chicken broth, is a study in simplicity done perfectly. Find ours in Olathe, KS.
           </p>
 
           <section className="mb-16">
@@ -47,16 +45,16 @@ export default function ComGaPage() {
             <div className="grid gap-6">
               {[
                 {
-                  img: '/images/com-ga-dark-white-chicken-rice.png',
-                  name: 'Cơm Gà Dark & White',
-                  price: '$16.95',
-                  desc: 'The classic. Dark and white meat together, cold-poached to perfection, served over ginger-oil rice.',
-                },
-                {
                   img: '/images/com-ga-white-chicken-rice.png',
                   name: 'Cơm Gà White Chicken',
                   price: '$15.95',
                   desc: 'Tender breast and wing meat, leaner, lighter, and silky smooth.',
+                },
+                {
+                  img: '/images/com-ga-dark-white-chicken-rice.png',
+                  name: 'Cơm Gà Dark & White',
+                  price: '$16.95',
+                  desc: 'The classic. Dark and white meat together, cold-poached to perfection, served over ginger-oil rice.',
                 },
                 {
                   img: '/images/com-ga-dark-chicken-rice.png',
@@ -94,7 +92,7 @@ export default function ComGaPage() {
           </section>
 
           <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8 text-center">
-            <h2 className="font-serif text-3xl text-foreground mb-4">Try Kansas City's Best Cơm Gà</h2>
+            <h2 className="font-serif text-3xl text-foreground mb-4">Try Our Signature Cơm Gà</h2>
             <p className="text-muted-foreground mb-6">15204 W 119th St, Olathe, KS 66062</p>
             <a
               href="https://comgahoustonolathe.toast.site/order"

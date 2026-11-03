@@ -46,6 +46,15 @@ export default function AboutPage() {
           <p>
             Cơm Gà Houston was born from a love of Vietnamese home cooking. Our family carried these recipes from Vietnam, perfecting them across decades before sharing them with Kansas City.
           </p>
+          <div className="bg-surface rounded-2xl p-6 border border-border">
+            <h2 className="font-serif text-2xl text-foreground mb-3">About the name</h2>
+            <p>
+              We get asked often: are you from Houston? Houston is part of our brand name, not
+              our address. You will find us at 15204 W 119th St in Olathe, Kansas, serving the
+              Kansas City metro — including Overland Park, Lenexa, and the surrounding Johnson
+              County communities.
+            </p>
+          </div>
           <p>
             In Vietnamese culture, food isn't just sustenance, it's how we express love, celebrate milestones, and stay connected to where we come from. Every dish we serve carries that meaning. The broth for our pho simmers for hours because that's the only right way to do it. The chicken for our Cơm Gà is poached gently because that's how it stays impossibly tender.
           </p>
@@ -64,9 +73,14 @@ export default function AboutPage() {
             <a href="https://comgahoustonolathe.toast.site/order" target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-primary px-8 text-base font-semibold text-white hover:bg-primary-hover transition-colors">
               Order Online
             </a>
-            <Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md border-2 border-primary px-8 text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
+            <a
+              href="https://www.google.com/maps?cid=14295853395954048914"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center rounded-md border-2 border-primary px-8 text-base font-semibold text-primary hover:bg-primary/5 transition-colors"
+            >
               Get Directions
-            </Link>
+            </a>
           </div>
         </div>
       </div>
