@@ -74,7 +74,7 @@ export default function AboutPage() {
               Order Online
             </a>
             <a
-              href="https://www.google.com/maps?cid=14295853395954048914"
+              href="https://www.google.com/maps?cid=10234846820205001298"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-12 items-center justify-center rounded-md border-2 border-primary px-8 text-base font-semibold text-primary hover:bg-primary/5 transition-colors"
